@@ -1,0 +1,29 @@
+Name,Quantity,Unit
+Methane from landfill,120,kg/year/ha
+Nitrogen oxides from power plant,0.8,g/kWh
+Volatile organic compounds from paint,1.5,g/L
+Carbon monoxide from car exhaust,12,g/km
+Particulate matter from diesel truck,0.05,g/km
+Sulfur dioxide from coal combustion,20,g/GJ
+Ammonia from fertilizer application,2,kg/ha
+Greenhouse gas emissions from livestock,18,kg CO2e/head/year
+Mercury from coal-fired power plant,0.002,g/MWh
+Lead from industrial smelting,0.01,g/ton of ore
+Benzene from gasoline evaporation,2,g/L
+Formaldehyde from wood combustion,15,mg/m3
+Acetone from chemical production,300,g/ton
+Toluene from oil refinery,5,g/bbl
+Xylene from paint thinner,400,mg/L
+Ethylbenzene from plastic production,8,g/ton
+Styrene from rubber production,12,g/ton
+Carbon tetrachloride from dry cleaning,0.5,kg/year
+Trichloroethylene from metal degreasing,2,kg/year
+Perchloroethylene from textile cleaning,1.5,kg/year
+Chloroform from water disinfection,0.02,mg/L
+Dichloromethane from paint stripper,300,g/L
+Carbon disulfide from viscose production,5,kg/ton
+Hydrogen sulfide from oil and gas production,10,g/m3
+Sulfur hexafluoride from electronics industry,0.001,kg/year
+Nitrous oxide from agricultural soil,0.5,kg/ha/year
+Ozone from photochemical smog,0.08,ppm
+Black carbon from diesel exhaust,0.02,g/km
