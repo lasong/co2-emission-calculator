@@ -18,6 +18,7 @@ class EmissionsController < ApplicationController
 
   def show
     @emission = Emission.find(params[:id])
+    @emission_calculations = @emission.emission_calculations
   end
 
   private

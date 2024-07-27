@@ -3,16 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.3"
 
-
+gem "importmap-rails"
+gem "jbuilder"
+gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.4"
+gem "roo"
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
-gem "puma", "~> 5.0"
-gem "importmap-rails"
+gem "stimulus-rails"
 gem "tailwindcss-rails"
 gem "turbo-rails"
-gem "stimulus-rails"
-gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

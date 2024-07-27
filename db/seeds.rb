@@ -5,5 +5,5 @@ CSV.foreach("#{File.dirname(__FILE__)}/seed-data/emission_factors.csv", headers:
     name: row['Name'],
     quantity: row['Quantity'].to_f,
     unit: row['Unit']
-  ).find_or_create_by(uuid: row['Name'].parameterize)
+  ).find_or_create_by(uuid: EmissionFactor.normalize(row['Name']))
 end

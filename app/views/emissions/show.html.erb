@@ -1,1 +1,22 @@
-<h1 class="text-2xl font-bold mb-4">Emission Calculations</h1>
+<h1 class="text-2xl font-bold mb-4"><%= "Emission Calculations For #{@emission.name}"%></h1>
+
+<table class="min-w-full divide-y divide-gray-200">
+  <thead class="bg-gray-50">
+    <tr>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Emission Factor Name</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CO2 Emission (g)</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Source</th>
+    </tr>
+  </thead>
+  <tbody class="bg-white divide-y divide-gray-200">
+    <% @emission_calculations.each do |calc| %>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap"><%= calc.quantity %></td>
+        <td class="px-6 py-4 whitespace-nowrap"><%= calc.emission_factor.name %></td>
+        <td class="px-6 py-4 whitespace-nowrap"><%= calc.value %></td>
+        <td class="px-6 py-4 whitespace-nowrap"><%= calc.source %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
