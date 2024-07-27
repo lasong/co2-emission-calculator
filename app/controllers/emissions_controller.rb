@@ -10,6 +10,7 @@ class EmissionsController < ApplicationController
   def create
     @emission = Emission.new(emission_params)
     if @emission.save
+      ProcessEmissionJob.perform_later(@emission.id)
       redirect_to @emission
     else
       render :new

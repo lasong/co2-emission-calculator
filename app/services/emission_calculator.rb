@@ -10,17 +10,7 @@ class EmissionCalculator
       spreadsheet.each_with_index do |row, index|
         next if index.zero? # Skip header row
 
-        emission_factor = EmissionFactor.find_by!(uuid: EmissionFactor.normalize(row[3]))
-        quantity = row[1].to_f
-
-        EmissionCalculation.create!(
-          emission_id: emission.id,
-          emission_factor_id: emission_factor.id,
-          value: quantity * emission_factor.quantity,
-          quantity: quantity,
-          source: row[0],
-          unit: row[2]
-        )
+        calculate_and_save_for_emission_row(row)
       end
     end
   end
@@ -28,4 +18,18 @@ class EmissionCalculator
   private
 
   attr_reader :emission
+
+  def calculate_and_save_for_emission_row(emission_row)
+    emission_factor = EmissionFactor.find_by!(uuid: EmissionFactor.normalize(emission_row[3]))
+    quantity = emission_row[1].to_f
+
+    EmissionCalculation.create!(
+      emission_id: emission.id,
+      emission_factor_id: emission_factor.id,
+      value: quantity * emission_factor.quantity,
+      quantity: quantity,
+      source: emission_row[0],
+      unit: emission_row[2]
+    )
+  end
 end
