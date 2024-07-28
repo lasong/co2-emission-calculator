@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
+- Ruby (v3.1.3)
 
-Things you may want to cover:
+## Setup
+- Run `bundle install`
+- Run `bundle exec rails db:create db:migrate db:test:prepare`
+- Run `bundle exec rails db:seed`
+- Install foreman by running `gem install foreman` (optional)
 
-* Ruby version
+## Running the application
+Start the app by running:
 
-* System dependencies
+```
+./bin/dev
+```
 
-* Configuration
+## Assumptions
+- Emission file structure is standard
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Improvements
+- Authentication / Authorization
+- Use a more suitable database like PostgreSQL
+- Use background job apps (rabbitmq, sidekiq)
+- Add kogging / monitoring
+- Add processed status to `Emission` model

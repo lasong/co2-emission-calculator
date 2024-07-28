@@ -5,11 +5,9 @@ class EmissionCalculator
 
   def calculate_and_save
     emission.file.open do |file|
-      spreadsheet = Roo::Spreadsheet.open(file)
+      file_handler = FileHandler.new(file)
 
-      spreadsheet.each_with_index do |row, index|
-        next if index.zero? # Skip header row
-
+      file_handler.rows.each do |row|
         calculate_and_save_for_emission_row(row)
       end
     end
