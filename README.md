@@ -16,6 +16,13 @@ Start the app by running:
 ./bin/dev
 ```
 
+## Running tests
+Run the tests by running:
+
+```
+bundle exec rspec spec
+```
+
 ## Assumptions
 - Emission file structure is standard
 
